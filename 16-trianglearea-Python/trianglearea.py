@@ -5,5 +5,6 @@
 
 
 def trianglearea(s1, s2, s3):
-	# your code goes here
-	pass
+    s = float((s1+s2+s3)/2)					# half of perimeter 
+    area = float((s*(s-s1)*(s-s2)*(s-s3))**0.5)   #Herons formula 
+    return area
