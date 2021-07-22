@@ -16,4 +16,23 @@
 
 
 def nth_happy_number(n):
-	return 0
+	a=1
+	b=0
+	while(a<=abs(n)):
+		b+=1
+		if(happy(b)):
+			a+=1
+	return b
+
+def happy(n):
+	s=0
+	while(n):
+		s+=(n%10)**2
+		n//=10
+	if(s==1):
+		return True
+	elif(s<10):
+		return False
+	else:
+		return happy(s)
+	
