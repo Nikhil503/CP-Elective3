@@ -18,5 +18,16 @@
 # assert(ishappynumber(405) == False)
 
 def ishappynumber(n):
-	# your code goes here
-	pass
+	s=0
+	if(n<0):
+		return False
+	while(n):
+		s+=(n%10)**2
+		n//=10
+	
+	if(s==1):
+		return True
+	elif(s<10):
+		return False
+	else:
+		return ishappynumber(s)
