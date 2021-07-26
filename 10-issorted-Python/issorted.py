@@ -5,6 +5,38 @@
 # learn soon, it runs in O(n) time, where n=len(a)), and so in particular you may not sort 
 # the list.
 
+def isascending(a):
+    flag = 0
+    a1 = a[:]
+    a1.sort()
+    if (a1 == a):
+        flag = 1
+
+# printing result
+    if (flag):
+        return True
+    else:
+        return False
+
+# run a loop for first element and check if we could find any larger element than it after that element
+
+
+def isdescending(a):
+    flag = 0
+    i = 1
+    while i < len(a):
+        if(a[i] > a[i - 1]):
+            flag = 1
+        i += 1
+
+# printing result
+    if (not flag):
+        return True
+    else:
+        return False
+
+
 def issorted(a):
-	# your code goes here
-	pass
+    if(isascending(a) or (isdescending(a))):
+        return True
+    return False
