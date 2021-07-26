@@ -19,8 +19,6 @@ def isascending(a):
         return False
 
 # run a loop for first element and check if we could find any larger element than it after that element
-
-
 def isdescending(a):
     flag = 0
     i = 1
@@ -28,7 +26,6 @@ def isdescending(a):
         if(a[i] > a[i - 1]):
             flag = 1
         i += 1
-
 # printing result
     if (not flag):
         return True
