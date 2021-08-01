@@ -19,11 +19,11 @@ def areAnagrams(s1, s2):
     return False
 
 # write your test cases here...
-assert(areAnagrams("Aba", "BAA") == True)
+assert(areAnagrams("Bababa", "ababab") == True)
+assert(areAnagrams("Goku", "vegeta") == False)
 assert(areAnagrams("Listen", "Silent") == True)
-assert(areAnagrams("python", "ythonp") == True)
+assert(areAnagrams("range", "rage") == False)
 assert(areAnagrams("Abc", "def") == False)
-assert(areAnagrams("car", "bike") == False)
-assert(areAnagrams("apple", "plum") == False)
+assert(areAnagrams("naruto", "sasukae") == False)
 
 print ("All test cases passed....")
