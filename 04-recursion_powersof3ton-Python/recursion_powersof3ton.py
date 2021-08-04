@@ -5,4 +5,19 @@
 
 def recursion_powersof3ton(n):
 	# Your code goes here
-	pass
+	# Your code goes here
+	if newL == None:
+		newL = []
+	if nextPower == 0:
+		newL.append(1)
+	if n < 1:
+		return None
+	else:
+		#every time we move on our power increments by 1
+		nextPower += 1
+		nextNumber = 3**nextPower
+		#if next number is greater than our number then we stop looping
+		if(nextNumber > n):
+			return newL
+		newL.append(nextNumber)
+		return recursion_powersof3ton(n, nextPower, newL)
